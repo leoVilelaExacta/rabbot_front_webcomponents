@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MenuComponent } from 'menuPrincipal';
+import { MenuComponent } from 'projects/menu-principal/src/lib/menu/menu.component';
+
 
 const routes: Routes = [
   { path: 'menu-principal', component: MenuComponent, pathMatch: 'full' },
-  // ... suas outras rotas
 ];
 
 @NgModule({
