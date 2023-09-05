@@ -4,10 +4,11 @@ import { MenuComponent } from './menu/menu.component';
 import { SvgImageComponent } from './svg-image/svg-image.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { runAt } from 'src/environments/develop';
+//import { runAt } from 'src/environments/develop';
 
 
-const coreModules = runAt.standalone ? [BrowserModule, CommonModule] : [CommonModule];
+// const coreModules = runAt.standalone ? [BrowserModule, CommonModule] : [CommonModule];
+const coreModules = [BrowserModule, CommonModule];
 
 @NgModule({
   declarations: [
