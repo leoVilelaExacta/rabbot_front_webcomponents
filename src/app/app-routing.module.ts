@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { MenuComponent } from 'menuPrincipal';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'menu-principal', component: MenuComponent, pathMatch: 'full' },
+  // ... suas outras rotas
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

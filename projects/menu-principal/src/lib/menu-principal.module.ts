@@ -1,18 +1,29 @@
-import { NgModule } from '@angular/core';
-import { MenuPrincipalComponent } from './menu-principal.component';
+
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { MenuComponent } from './menu/menu.component';
+import { SvgImageComponent } from './svg-image/svg-image.component';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { runAt } from 'src/environments/develop';
 
 
+const coreModules = runAt.standalone ? [BrowserModule, CommonModule] : [CommonModule];
 
 @NgModule({
   declarations: [
-    MenuPrincipalComponent,
-    MenuComponent
+    MenuComponent,
+    SvgImageComponent
   ],
-  imports: [
-  ],
+  imports: coreModules,
   exports: [
-    MenuPrincipalComponent
+    MenuComponent
   ]
 })
-export class MenuPrincipalModule { }
+export class MenuPrincipalModule {
+  /*static forRoot(): ModuleWithProviders<MenuPrincipalModule> {
+    return {
+      ngModule: MenuPrincipalModule,
+      providers: []
+    };
+  }*/
+}
