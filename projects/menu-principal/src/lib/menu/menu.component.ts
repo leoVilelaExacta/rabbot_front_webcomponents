@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'lib-menu',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  @Output('linkMenu')
+  linkMenu: EventEmitter<any> = new EventEmitter<any>();
 
+  page(link: string){
+    this.linkMenu.emit(link);
+  }
 }
