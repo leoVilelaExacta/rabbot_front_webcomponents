@@ -9,8 +9,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class MenuComponent {
   @Output('linkMenu')
   linkMenu: EventEmitter<any> = new EventEmitter<any>();
+  menuClosed = false;
 
   page(link: string){
     this.linkMenu.emit(link);
+  }
+
+  toggleMenu() {
+    this.menuClosed = !this.menuClosed;
   }
 }

@@ -1,12 +1,12 @@
-<div class="menuPrincipal">
+<div class="menuPrincipal"  [class.menu-closed]="menuClosed">
     <div class="header">
-        <div class="iconmenu"></div>
+        <div class="iconmenu" (click)="toggleMenu()"></div>
         <div class="logo"></div>
     </div>
     <div class="divisor"></div>
     <div class="search">
         <div class="lupa"></div>
-        <input type="text" placeholder="Localizar ID">
+        <input type="text" placeholder="Localizar ID" class="inputSearch">
     </div>
     <div class="divisor"></div>
     <div class="itens">
