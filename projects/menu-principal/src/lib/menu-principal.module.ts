@@ -7,8 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 //import { runAt } from 'src/environments/develop';
 
 
-// const coreModules = runAt.standalone ? [BrowserModule, CommonModule] : [CommonModule];
-const coreModules = [BrowserModule, CommonModule];
+// const coreModules = [BrowserModule, CommonModule];
+const coreModules = [CommonModule];
 
 @NgModule({
   declarations: [
