@@ -1,0 +1,10 @@
+@import 'themes.scss';
+
+@mixin apply-theme($theme-name) {
+  $theme: map-get($themes, $theme-name);
+  
+  background-color: map-get($theme, Background_1);
+  color: map-get($theme, Font_Title);
+
+}
+

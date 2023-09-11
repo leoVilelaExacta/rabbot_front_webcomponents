@@ -9,7 +9,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
 
-    "build:menuprincipal": "ng build menuPrincipal && cd dist/menu-principal && npm publish --access public"
+    "build:menuprincipal": "ng build menuPrincipal && cd dist/menu-principal && npm publish --access public",
+    "build:resourceSharing": "ng build resourceSharing && cp projects/resource-sharing/src/lib/shared-styles/*.scss dist/resource-sharing && cd dist/resource-sharing && npm publish --access public",
+    "build:resourceSharingDev": "ng build resourceSharing && cp projects/resource-sharing/src/lib/shared-styles/*.scss dist/resource-sharing && cd dist/resource-sharing"
   },
   "private": true,
   "dependencies": {

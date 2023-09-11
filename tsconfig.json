@@ -12,6 +12,9 @@
     "paths": {
       "menuPrincipal": [
         "dist/menu-principal"
+      ],
+      "resourceSharing": [
+        "dist/resource-sharing"
       ]
     },
     "noFallthroughCasesInSwitch": true,
