@@ -1,5 +1,6 @@
 import * as i0 from '@angular/core';
 import { Injectable, Component, NgModule } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 class ResourceSharingService {
     constructor() { }
@@ -57,6 +58,26 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.3", ngImpor
                 }]
         }] });
 
+class ThemesService {
+    constructor() {
+        this.themeSubject = new BehaviorSubject(localStorage.getItem(ThemesService.THEME_KEY) || 'light');
+        this.theme$ = this.themeSubject.asObservable();
+    }
+    static { this.THEME_KEY = 'current-theme'; }
+    setTheme(theme) {
+        localStorage.setItem(ThemesService.THEME_KEY, theme);
+        this.themeSubject.next(theme);
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: ThemesService, deps: [], target: i0.ɵɵFactoryTarget.Injectable }); }
+    static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: ThemesService, providedIn: 'root' }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: ThemesService, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }] });
+
 /*
  * Public API Surface of resource-sharing
  */
@@ -65,5 +86,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { ResourceSharingComponent, ResourceSharingModule, ResourceSharingService, SharedStylesComponent };
+export { ResourceSharingComponent, ResourceSharingModule, ResourceSharingService, SharedStylesComponent, ThemesService };
 //# sourceMappingURL=rabbot-resource-sharing.mjs.map

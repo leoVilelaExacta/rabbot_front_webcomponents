@@ -6,5 +6,6 @@
   },
   "assets": [
     "src/assets/**/*"
-  ]
+  ],
+  "allowedNonPeerDependencies": ["@rabbot/resource-sharing"]
 }

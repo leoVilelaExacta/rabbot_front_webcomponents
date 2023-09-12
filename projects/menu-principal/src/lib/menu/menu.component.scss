@@ -1,6 +1,8 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap');
+@import '../../../../menu-principal/node_modules/@rabbot/resource-sharing/shared.styles.scss';
+
 
 .menuPrincipal.menu-closed {
     width: 45px;
@@ -23,13 +25,48 @@
 }
 
 .menuPrincipal {
-    background-color: #F4F6F9;
+    background-color: map-get(map-get($themes, light), Background_2); 
     max-width: 221px;
     padding: 10px 10px;
     box-sizing: border-box;
     height: 100vh;
     overflow: auto;
     transition: width 0.3s ease;
+
+    &.dark {
+        background-color: map-get(map-get($themes, dark), Background_2);
+        .logo{
+            color: map-get(map-get($themes, dark), Font_Title);
+        }
+        .divisor {
+            background-color: map-get(map-get($themes, dark), Divider_Background_2);
+        }
+        .search {
+            .inputSearch{
+                color: map-get(map-get($themes, dark), Font_Title);
+            }
+        }
+
+        .itens {    
+            .item {
+                .text {
+                    color: map-get(map-get($themes, dark), Font_Title);
+                }
+    
+                div:first-child {
+                     color: map-get(map-get($themes, dark), Button_Default_Font);
+                }
+    
+                &:hover {
+                    background-color: map-get(map-get($themes, dark), Background_Menu_Hover);
+    
+                    div:first-child {
+                        color: map-get(map-get($themes, dark), Icon_Primary);
+                    }
+                }
+            }
+        }
+    }
 
     .svg {
         background-size: cover;
@@ -46,9 +83,10 @@
     }
     .logo {
         @extend .svg;
-        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTQiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCA5NCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTg3Ljk4MzYgMi44NzA1M0w3Ni44MTY5IDEuMzA4ODRDNzguNDM2OSAzLjgxNTI2IDg3Ljk4MzYgMi44NzA1MyA4Ny45ODM2IDIuODcwNTNaIiBmaWxsPSIjNjdDRjZBIi8+CjxwYXRoIGQ9Ik04OC42NTg4IDMuMjU2MzVDODguNjU4OCAzLjI1NjM1IDgxLjg3IDguMDE4NTYgNzUuMzg5OSA2LjAzMjdMODguNjU4OCAzLjI1NjM1WiIgZmlsbD0iIzY3Q0Y2QSIvPgo8cGF0aCBkPSJNODUuMTY3OSA2LjM2MDQ2Qzc4LjY4NzggOS41NDE2OSA3Ni43OTc3IDEyLjg3NzIgNzYuNzk3NyAxMi44NzcyQzg0LjY2NjUgNi42MTExIDkxLjI4MTYgNy4yMjgwNyA5MS4yODE2IDcuMjI4MDdDOTEuMjgxNiA3LjIyODA3IDkwLjQxMzggNi4xNjc2NiA4OC42MjAxIDUuODU5MTdDODguNjIwMSA1Ljg1OTE3IDkwLjc0MTYgNS44MjA2MSA5MS41MzI0IDUuMTA3MjVDOTIuMjg0NSA0LjQzMjQ0IDkyLjA5MTcgMy42NDE5NSA5MS4yODE2IDMuMjU2MzVIOTMuMzgzOEM5NC4xMzYgNS43MDQ5MyA4OS45NzAyIDUuODU5MTcgODkuOTcwMiA1Ljg1OTE3QzkzLjI4NzQgNi41MTQ3IDkzLjczMSA5LjE5NDY1IDkzLjczMSA5LjE5NDY1QzgzLjgxNzkgOC4wNTcxMiA3NC40NDQ4IDE1LjQ5OTMgNzQuNDQ0OCAxNS40OTkzQzc3LjI3OTkgOC45MDU0NSA4NS4xNjc5IDYuMzYwNDYgODUuMTY3OSA2LjM2MDQ2WiIgZmlsbD0iIzY3Q0Y2QSIvPgo8cGF0aCBkPSJNNTQuNzE0OCAzLjczOTI2QzUxLjcyNTUgMy43MzkyNiA0OS41NDYxIDUuNzYzNjggNDkuNTQ2MSA4LjU0MDAzQzQ5LjU0NjEgMTEuMzE2NCA1MS43MjU1IDEzLjM0MDggNTQuNzE0OCAxMy4zNDA4QzU3LjcwNDIgMTMuMzQwOCA1OS44ODM1IDExLjMxNjQgNTkuODgzNSA4LjU0MDAzQzU5Ljg4MzUgNS43NjM2OCA1Ny43MDQyIDMuNzM5MjYgNTQuNzE0OCAzLjczOTI2Wk01NC43MTQ4IDExLjIzOTNDNTIuODYzNCAxMS4yMzkzIDUxLjY2NzYgMTAuMTc4OCA1MS42Njc2IDguNTQwMDNDNTEuNjY3NiA2LjkwMTIxIDUyLjg2MzQgNS44NDA4IDU0LjcxNDggNS44NDA4QzU2LjU2NjMgNS44NDA4IDU3Ljc2MiA2LjkwMTIxIDU3Ljc2MiA4LjU0MDAzQzU3Ljc2MiAxMC4xNzg4IDU2LjU2NjMgMTEuMjM5MyA1NC43MTQ4IDExLjIzOTNaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMzAuMzc1NyAzLjczOTU2QzI5LjA0NSAzLjczOTU2IDI3Ljg0OTIgNC4xMjUxNyAyNi44ODQ5IDQuNzYxNDFWMC41MDA0ODhIMjQuNzQ0MVYxMy4zNjA0TDMwLjUxMDcgMTMuMzQxMUMzMy41MDAxIDEzLjM0MTEgMzUuNjc5NCAxMS4zMTY3IDM1LjY3OTQgOC41NDAzM0MzNS42Nzk0IDUuNzQ0NyAzMy40NDIyIDMuNzM5NTYgMzAuMzc1NyAzLjczOTU2Wk0zMC41MTA3IDExLjIzOTZIMjYuODg0OVY4LjY5NDU4QzI2Ljg4NDkgNy45NjE5MyAyNy4xOTM1IDcuMjI5MjggMjcuNzUyOCA2Ljc0NzI3QzI4LjM4OTIgNi4xODgxNSAyOS4zMTUgNS44NjAzOCAzMC4zNzU3IDUuODYwMzhDMzIuMjQ2NSA1Ljg2MDM4IDMzLjU1NzkgNi45NTkzNiAzMy41NTc5IDguNTU5NjFDMzMuNTU3OSAxMC4xNzkyIDMyLjM2MjIgMTEuMjM5NiAzMC41MTA3IDExLjIzOTZaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNNDIuOTExNiAzLjczOTU2QzQxLjU4MDggMy43Mzk1NiA0MC4zODUxIDQuMTI1MTcgMzkuNDIwOCA0Ljc2MTQxVjAuNTAwNDg4SDM3LjI4VjEzLjM2MDRMNDMuMDQ2NiAxMy4zNDExQzQ2LjAzNTkgMTMuMzQxMSA0OC4yMTUzIDExLjMxNjcgNDguMjE1MyA4LjU0MDMzQzQ4LjIxNTMgNS43NjM5OCA0NS45NzgxIDMuNzM5NTYgNDIuOTExNiAzLjczOTU2Wk00My4wMjczIDExLjIzOTZIMzkuNDAxNVY4LjY5NDU4QzM5LjQwMTUgNy45NjE5MyAzOS43MTAxIDcuMjI5MjggNDAuMjY5NCA2Ljc0NzI3QzQwLjkwNTggNi4xODgxNSA0MS44MzE2IDUuODYwMzggNDIuODkyMyA1Ljg2MDM4QzQ0Ljc2MzEgNS44NjAzOCA0Ni4wNzQ1IDYuOTU5MzYgNDYuMDc0NSA4LjU1OTYxQzQ2LjA5MzggMTAuMTc5MiA0NC44OTgxIDExLjIzOTYgNDMuMDI3MyAxMS4yMzk2WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTkuNjYyMzYgNi45MDE1M0MxMC4wMDk1IDYuMzQyNCAxMC4yMDI0IDUuNjg2ODcgMTAuMjAyNCA0Ljk3MzUxQzEwLjIwMjQgMi45MTA1MyA4LjUyNDQ4IDEuMjEzODcgNi40NDE1OCAxLjIxMzg3SDBWMTMuMzYwNEgyLjE0MDc2VjguNzMzMTVDMi4xNDA3NiA4LjczMzE1IDQuMzAwODEgOC43MzMxNSA1LjA1Mjk3IDguNzMzMTVMOC4wODA5IDEzLjM2MDRIMTAuNjQ2TDcuNDgzMDMgOC41NDAzNEM4LjM3MDE5IDguMjg5NyA5LjE2MDkyIDcuNzExMyA5LjY2MjM2IDYuOTAxNTNaTTIuMTQwNzYgMy4zNzMyNUg2LjQyMjI5QzcuMzA5NDUgMy4zNzMyNSA4LjAyMzA0IDQuMDg2NjIgOC4wMjMwNCA0Ljk3MzUxQzguMDIzMDQgNS44NjA0IDcuMzA5NDUgNi41NzM3NiA2LjQyMjI5IDYuNTczNzZIMi4xNDA3NlYzLjM3MzI1WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTExLjYxMDQgOC42NzYyNUMxMS42MTA0IDExLjQ3MTkgMTMuNzg5NyAxMy41MTU2IDE2LjgxNzYgMTMuNTE1NkMxOC4xNjc2IDEzLjUxNTYgMTkuNDIxMiAxMi45NzU3IDIwLjQ0MzQgMTIuMDg4OFYxMy4zNjEzSDIyLjU2NDlWMy44MzY5MUgxNi44MTc2QzEzLjc4OTcgMy44MzY5MSAxMS42MTA0IDUuODgwNjIgMTEuNjEwNCA4LjY3NjI1Wk0yMC40MjQxIDcuNDIzMDNDMjAuNDI0MSA5LjY3ODgyIDE4LjUxNDggMTEuMzU2MiAxNi43OTgzIDExLjM1NjJDMTQuOTQ2OSAxMS4zNTYyIDEzLjc1MTEgMTAuMjk1OCAxMy43NTExIDguNjc2MjVDMTMuNzUxMSA3LjA1NjcxIDE0Ljk0NjkgNS45OTYzIDE2Ljc5ODMgNS45OTYzSDIwLjQyNDFWNy40MjMwM1oiIGZpbGw9ImJsYWNrIi8+CjxwYXRoIGQ9Ik02Ni42NzIzIDUuOTk1MzVWMy44NTUyNEg2My40NTE2VjAuNTAwNDg4SDYxLjMxMDhWOC4wMTk3N0M2MS4zMTA4IDEwLjk2OTYgNjMuNzAyMyAxMy4zNjA0IDY2LjY1MzEgMTMuMzYwNFYxMS4yMjAzQzY0Ljg3ODcgMTEuMjIwMyA2My40NTE2IDkuNzkzNTUgNjMuNDUxNiA4LjAxOTc3VjUuOTk1MzVINjYuNjcyM1oiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=');
         width: 94px;
         height: 14px;
+        margin-left: 5px;
+        color: map-get(map-get($themes, light), Font_Title);
     }
     .ajuda {
         @extend .svg;
@@ -118,13 +156,13 @@
         align-items: center;
         width: 100%;
         font-family: Albert Sans, Arial, Helvetica, sans-serif;
-
-        div:first-child {
-            margin-right: 10px;
-        }
     }
 
+
     .search {
+        .inputSearch{
+            color: map-get(map-get($themes, light), Font_Title);
+        }
         input {
             background-color: transparent;
             height: 24px;
@@ -140,7 +178,7 @@
 
     .divisor {
         height: 1px;
-        background-color: #D7DBE3;
+        background-color: map-get(map-get($themes, light), Divider_Background_2);
         width: 100%;
         margin: 10px 0;
     }
@@ -150,6 +188,7 @@
         flex-direction: column;
 
         .item {
+            position: relative;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -161,22 +200,33 @@
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
+                color: map-get(map-get($themes, light), Font_Title);
             }
 
             div:first-child {
                 margin-right: 10px;
-                color: #9CA3AD;
+                color: map-get(map-get($themes, light), Button_Default_Font);
             }
 
             &:hover {
-                background-color: #EDEFF3;
+                background-color: map-get(map-get($themes, light), Background_Menu_Hover);
+
+                &:before{
+                    content: "";
+                    width: 3px;
+                    height: 100%;
+                    background-color: map-get(map-get($themes, light), Icon_Primary);
+                    position: absolute;
+                    top: 0;
+                    left: -8px;
+                }
 
                 .text {
                     font-weight: bold;
                 }
 
                 div:first-child {
-                    color: #67CF6A;
+                    color: map-get(map-get($themes, light), Icon_Primary);
                 }
             }
         }

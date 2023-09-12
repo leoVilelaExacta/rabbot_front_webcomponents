@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ThemesService } from '@rabbot/resource-sharing';
 
 @Component({
   selector: 'lib-menu',
@@ -9,6 +10,10 @@ export class MenuComponent {
   @Output('linkMenu')
   linkMenu: EventEmitter<any> = new EventEmitter<any>();
   menuClosed = false;
+  theme: string = localStorage.getItem(ThemesService.THEME_KEY) === 'light' ? 'dark' : 'light';
+
+  constructor(private themesService: ThemesService) { }
+
 
   page(link: string){
     this.linkMenu.emit(link);
@@ -16,5 +21,12 @@ export class MenuComponent {
 
   toggleMenu() {
     this.menuClosed = !this.menuClosed;
+  }
+
+  ngOnInit() {
+    this.themesService.theme$.subscribe(theme => {
+      this.theme = theme;
+      document.body.className = theme; 
+    });
   }
 }
