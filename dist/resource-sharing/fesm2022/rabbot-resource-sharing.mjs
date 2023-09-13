@@ -78,6 +78,26 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.3", ngImpor
                 }]
         }] });
 
+class LanguageService {
+    constructor() {
+        this.languageSubject = new BehaviorSubject(localStorage.getItem(LanguageService.LANGUAGE_KEY) || 'pt');
+        this.language$ = this.languageSubject.asObservable();
+    }
+    static { this.LANGUAGE_KEY = 'current-language'; }
+    setLanguage(language) {
+        localStorage.setItem(LanguageService.LANGUAGE_KEY, language);
+        this.languageSubject.next(language);
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: LanguageService, deps: [], target: i0.ɵɵFactoryTarget.Injectable }); }
+    static { this.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: LanguageService, providedIn: 'root' }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: LanguageService, decorators: [{
+            type: Injectable,
+            args: [{
+                    providedIn: 'root'
+                }]
+        }] });
+
 /*
  * Public API Surface of resource-sharing
  */
@@ -86,5 +106,5 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.3", ngImpor
  * Generated bundle index. Do not edit.
  */
 
-export { ResourceSharingComponent, ResourceSharingModule, ResourceSharingService, SharedStylesComponent, ThemesService };
+export { LanguageService, ResourceSharingComponent, ResourceSharingModule, ResourceSharingService, SharedStylesComponent, ThemesService };
 //# sourceMappingURL=rabbot-resource-sharing.mjs.map
