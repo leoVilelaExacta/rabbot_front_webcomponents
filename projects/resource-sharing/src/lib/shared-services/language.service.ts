@@ -16,4 +16,14 @@ export class LanguageService {
     localStorage.setItem(LanguageService.LANGUAGE_KEY, language);
     this.languageSubject.next(language);
   }
+
+  constructor() {
+    window.addEventListener('storage', (event) => {
+      if (event.key === LanguageService.LANGUAGE_KEY) {
+        const language = event.newValue !== null ? event.newValue : 'pt';
+        this.setLanguage(language);
+      }
+    });
+  }
+  
 }

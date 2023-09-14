@@ -1,0 +1,21 @@
+{
+
+    "TITLE_LOGIN": "Access the platform",
+    "LOGIN": "Email",
+    "PLACEHOLDER_LOGIN": "Enter your email",
+    "PASSWORD": "Password",
+    "PLACEHOLDER_PASSWORD": "Enter your password",
+    "FORGOT_PASSWORD": "Forgot password",
+    "BUTTON_LOGIN": "Log in",
+    "TEXT_SSO": "or access using SSO",
+    "SEARCH_ID": "Search ID",
+    "STRATEGIC_VISION": "Strategic Vision",
+    "INDICATORS": "Indicators",
+    "DAILY_MANAGEMENT": "Daily Management",
+    "OPERATION_DATA": "Operation Data",
+    "HISTORICAL_VIEW": "Historical View",
+    "ORCHESTRATOR": "Orchestrator",
+    "SERVICES": "Services",
+    "SETTINGS": "Settings",
+    "HELP": "Help"
+}

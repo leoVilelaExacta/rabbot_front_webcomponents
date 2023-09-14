@@ -1,12 +1,19 @@
 {
   "name": "@rabbot/resource-sharing",
-  "version": "0.0.3",
+  "version": "0.0.11",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "assets": [
+    "src/assets/**/*"
+  ],
+  "scripts": {
+    "postinstall": "echo 'Starting postinstall' && cp -Rf src/assets/ ../../assets/ && echo 'Copy finished'",
+    "build:resourceSharing": "ng build resourceSharing && node postbuild.js"
   },
   "sideEffects": false
 }

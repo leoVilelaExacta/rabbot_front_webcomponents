@@ -1,0 +1,21 @@
+{
+
+    "TITLE_LOGIN": "Acesse a plataforma",
+    "LOGIN": "E-mail",
+    "PLACEHOLDER_LOGIN": "Digite seu e-mail",
+    "PASSWORD": "Senha",
+    "PLACEHOLDER_PASSWORD": "Digite sua senha",
+    "FORGOT_PASSWORD" : "Esqueci a senha",
+    "BUTTON_LOGIN": "Entrar",
+    "TEXT_SSO": "ou acesse usando SSO",
+    "SEARCH_ID": "Localizar ID",
+    "STRATEGIC_VISION": "Visão estratégica",
+    "INDICATORS": "Indicadores",
+    "DAILY_MANAGEMENT": "Gestão diária",
+    "OPERATION_DATA": "Dados da operação",
+    "HISTORICAL_VIEW": "Visão histórica",
+    "ORCHESTRATOR": "Orquestrador",
+    "SERVICES": "Serviços",
+    "SETTINGS": "Configurações",
+    "HELP": "Ajuda"
+}
