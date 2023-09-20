@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
 export class ResourceSharingComponent {
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: ResourceSharingComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
-    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.2.3", type: ResourceSharingComponent, selector: "lib-resourceSharing", ngImport: i0, template: `
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "16.2.5", ngImport: i0, type: ResourceSharingComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "16.2.5", type: ResourceSharingComponent, selector: "lib-resourceSharing", ngImport: i0, template: `
     <p>
       resource-sharing works!
     </p>
   `, isInline: true }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.3", ngImport: i0, type: ResourceSharingComponent, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "16.2.5", ngImport: i0, type: ResourceSharingComponent, decorators: [{
             type: Component,
             args: [{ selector: 'lib-resourceSharing', template: `
     <p>
