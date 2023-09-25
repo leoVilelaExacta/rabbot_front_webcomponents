@@ -1,12 +1,12 @@
 {
   "name": "@rabbot/rabbot-menu-principal",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "peerDependencies": {
     "@angular/common": "^16.2.3",
     "@angular/core": "^16.2.3",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
-    "@rabbot/resource-sharing": "^0.0.15"
+    "@rabbot/resource-sharing": "^0.0.17"
   },
   "dependencies": {
     "tslib": "^2.3.0"
