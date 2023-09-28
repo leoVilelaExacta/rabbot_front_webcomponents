@@ -51,5 +51,6 @@
   "DATE_CREATED": "Data da criação",
   "CREATE_AT": "Criado por",
   "CANCEL": "Cancelar",
-  "SAVE": "Salvar"
+  "SAVE": "Salvar",
+  "LAST_TRANSATION": "Última transação"
 }

@@ -51,5 +51,6 @@
   "DATE_CREATED": "Date created",
   "CREATE_AT": "Created by",
   "CANCEL": "Cancel",
-  "SAVE": "Save"
+  "SAVE": "Save",
+  "LAST_TRANSATION": "Last transation"
 }
