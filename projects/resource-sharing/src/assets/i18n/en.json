@@ -52,5 +52,11 @@
   "CREATE_AT": "Created by",
   "CANCEL": "Cancel",
   "SAVE": "Save",
-  "LAST_TRANSATION": "Last transation"
+  "LAST_TRANSATION": "Last transation",
+  "REQUIRED_FIELDS": "Required fields",
+  "ENTER_HERE": "Enter here",
+  "FORM_ASSETS_ID_PLATE": "ID (e.g. Plate)*",
+  "FORM_ASSETS_DESCRIPTION": "Description (e.g. Asset model)",
+  "HEAD": "Head",
+  "SUGESTED_FIELDS": "Sugested fields"
 }

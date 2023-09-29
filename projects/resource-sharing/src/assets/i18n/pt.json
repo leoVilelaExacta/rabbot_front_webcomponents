@@ -52,5 +52,11 @@
   "CREATE_AT": "Criado por",
   "CANCEL": "Cancelar",
   "SAVE": "Salvar",
-  "LAST_TRANSATION": "Última transação"
+  "LAST_TRANSATION": "Última transação",
+  "REQUIRED_FIELDS": "Campos obrigatórios",
+  "ENTER_HERE": "Digite aqui",
+  "FORM_ASSETS_ID_PLATE": "ID (Ex. Placa)*",
+  "FORM_ASSETS_DESCRIPTION": "Descrição (Ex. Modelo do ativo)*",
+  "HEAD": "Responsável",
+  "SUGESTED_FIELDS": "Campos sugeridos"
 }
