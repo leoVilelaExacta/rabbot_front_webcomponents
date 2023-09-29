@@ -10,7 +10,7 @@ import { LanguageService, ThemesService } from '@rabbot/resource-sharing';
 export class MenuComponent {
   @Output('linkMenu')
   linkMenu: EventEmitter<any> = new EventEmitter<any>();
-  language:  string = localStorage.getItem(LanguageService.LANGUAGE_KEY) === 'pt' ? 'en' : 'pt';
+  language: string = localStorage.getItem(LanguageService.LANGUAGE_KEY) ?? 'pt';
   menuClosed = false;
   theme: string = localStorage.getItem(ThemesService.THEME_KEY) === 'light' ? 'dark' : 'light';
 
